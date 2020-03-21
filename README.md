@@ -22,3 +22,6 @@ I show the overnight and first half of a trading day here. From the PrimeMap, th
 <p>The PrimeMap for the model trained contains buckets from -0.08 to +0.07 at 0.01 increments (16 buckets). Any second moves outside of -0.08 and +0.07 were placed in the -0.08 and +0.07 buckets appropriately. </p>
 <p>The network input is 30 x 16 PrimeMap. The network output is a 51-atom distribution. Testing networks such as LSTM, 1-D CNN, and Dense networks yielded similar results</p>
  
+<h2>Results</h2>
+<p>The network can easily fit to the training data. This is good news considering previous networks with a scalar output ended in "analysis paralysis." Below, I show price movement with along with the predictions reduced to a mean.
+ Interestingly, the trained model does seem to make better-than-random predictions on out-of-sample data.
