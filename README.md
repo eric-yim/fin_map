@@ -22,7 +22,7 @@ The observation, here, is what I call the PrimeMap. To represent a single minute
 I show the overnight and first half of a trading day here. From the PrimeMap, the human eye can see periods of higher volatility and lower volatility. To a trader, this could show increased and decreased interest in the trading product. Perhaps the trader would have a separate strategy for each state.</p>
 <img src="https://user-images.githubusercontent.com/48815706/77219367-2cdd5c80-6b03-11ea-9c8f-d966e2b6c29d.png">  
 <p>The PrimeMap for the model trained contains buckets from -0.08 to +0.07 at 0.01 increments (16 buckets). Any second moves outside of -0.08 and +0.07 were placed in the -0.08 and +0.07 buckets appropriately. </p>
-<p>The network input is 30 x 16 PrimeMap. The network output is a 51-atom distribution. Testing networks such as LSTM, 1-D CNN, and Dense networks yielded similar results</p>
+<p>The network input is 30 x 16 PrimeMap. The network output is a 51-atom distribution. Testing networks with mainly LSTM layers, mainly Conv1D layers, and exclusively Dense layers yielded similar results</p>
  
 <h2>Results</h2>
 <p>The network can easily fit to the training data. This is good news considering previous networks with a scalar output ended in "analysis paralysis." Below, I show price movement with along with the predictions reduced to a mean.
