@@ -5,7 +5,7 @@ In this repository, I use the distributional output described in https://arxiv.o
 <h3>Why no action?</h2>
 <p>
 In financial markets (except in the case where the actor has loads of capital), an action does not change the environment. Hence, the price movement is assumed to unfold the way it did regardless of actions taken. Therefore, I do need to value a location differently based on action taken, only based on the expected price movement. </p>
-<p>In a prior experiment, I ran the traditional DQN (with actions) on a small set of data. Note: the DQN agent learns the values across actions at each observation (i.e. the value of action 0 at observation X and the value of action 1 at observation X). The heavily weighted the observation and could not create a meaningful value differential between actions (not good when the difference between action 0 and action 1 is buy and sell).</p>
+<p>In a prior experiment, I ran the traditional DQN (with actions) on a small set of data. Note: the DQN agent learns the values across actions at each observation (i.e. the value of action 0 at observation X and the value of action 1 at observation X). The network heavily weighted the observation and could not create a meaningful value differential between actions (not good when the difference between action 0 and action 1 is buy and sell).</p>
 <p>Therefore, it is better to remove unnecessary and perhaps harmful complexity.
 </p>
 <h3>Why Cat DQN?</h2>
