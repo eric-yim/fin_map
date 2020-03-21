@@ -25,7 +25,7 @@ I show the overnight and first half of a trading day here. From the PrimeMap, th
 <p>The network input is 30 x 16 PrimeMap. The network output is a 51-atom distribution. Testing networks with mainly LSTM layers, mainly Conv1D layers, and exclusively Dense layers yielded similar results</p>
  
 <h2>Results</h2>
-<p>The network can easily fit to the training data. This is good news considering previous networks with a scalar output ended in "analysis paralysis." Below, I show price movement with along with the predictions reduced to a mean.
+<p>The network can easily fit to the training data. This is good news considering previous networks with a scalar output ended in "analysis paralysis." Below, I show price movement with along with the prediction distribution reduced to a mean.
   </p>
   <img src="https://user-images.githubusercontent.com/48815706/77219814-4e404780-6b07-11ea-9eab-f06bcf14e6be.png">
 <p>
