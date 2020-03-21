@@ -17,6 +17,6 @@ The categorical dqn outputs a distribution rather than a single value. This dist
 The observation, here, is what I call the PrimeMap. To represent a single minute, I've cut created a histogram of the 60 second-to-second moves. For example, the six second prices may be: [11, 13, 11, 12, 14, 11]. The this shows 5 price moves [+2, -2, +1, +2, -3]. This data can be represented as a histogram {-3: 1, -2: 1, -1: 0, 0: 0, +1: 1, +2: 2}. In this example, the net change is 0, but viewing the histogram, I can see movement was very wild. Through the PrimeMap, the network should be able to pick up information such as how rapidly the price is moving as well as generally whether the price is moving up, down, or sideways. Further, because 60 seconds is merged into 1-minute this allows minutes with similar distributions to be viewed similarly while putting less emphasis on exact order of second-to-second moves which contain a fair bit of randomness. The hope is that while seconds can be random, a minute may have meaning.
   </p>
   <p>
-I show the overnight and first half of a trading day here. From the PrimeMap, the human eye can see periods of higher volatility and lower volatility.
+I show the overnight and first half of a trading day here. From the PrimeMap, the human eye can see periods of higher volatility and lower volatility. </p>
 <img src="https://user-images.githubusercontent.com/48815706/77219367-2cdd5c80-6b03-11ea-9c8f-d966e2b6c29d.png">  
-  </p>
+ 
