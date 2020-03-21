@@ -4,11 +4,13 @@ In this repository, I use the distributional output described in https://arxiv.o
 <img src="https://user-images.githubusercontent.com/48815706/77218908-724b5b00-6afe-11ea-85c8-dc91f554981c.gif" />
 <h3>Why no action?</h2>
 <p>
-In financial markets (except in the case where the actor has loads of capital), an action does not change the environment. Hence, the price movement is assumed to unfold the way it did regardless of actions taken. Therefore, I do need to value a location differently based on action taken, only based on the expected price movement. Indeed, when training an agent based on a traditional DQN approach, the network learns roughly the valuation as seen here, while the difference in value based on action does not seem to provide meaningful insight. It is better to remove unnecessary complexity.
+In financial markets (except in the case where the actor has loads of capital), an action does not change the environment. Hence, the price movement is assumed to unfold the way it did regardless of actions taken. Therefore, I do need to value a location differently based on action taken, only based on the expected price movement. </p>
+<p>In a prior experiment, I ran the traditional DQN (with actions) on a small set of data. Note: the DQN agent learns the values across actions at each observation (i.e. the value of action 0 at observation X and the value of action 1 at observation X). The heavily weighted the observation and could not create a meaningful value differential between actions (not good when the difference between action 0 and action 1 is buy and sell).</p>
+<p>Therefore, it is better to remove unnecessary and perhaps harmful complexity.
 </p>
-<h3>Why Cat DQN</h2>
+<h3>Why Cat DQN?</h2>
 <p>
-The categorical dqn outputs a distribution rather than a single value. This distribution gives the network some flexibility with matching the valuation, which is important for an inherently random environment like in financial markets. A prior train with similar inputs and the standard dqn output, yielded a network that would output a constant number (meaning, it could not find a pattern and defaulted to some mean value).
+The categorical dqn outputs a value distribution rather than a single value. This distribution gives the network some flexibility with matching the valuation, which is important for an inherently random environment as is a financial market. A prior train with similar inputs and the standard dqn output, yielded a network that could only output a constant number (meaning, it could not find a pattern and defaulted to some mean value).
 </p>
 <h2>Setup</h2>
 <p>The environment loads with some known data. (Data is assumed to be stored in OHLC format.) The environment can be used with standard reinforcement learning methods. But here, I am interested only in valuation. The observation is a manipulation of the recent X minutes (30 minutes). The reward is a scaled profit or loss going into the next minute.</p>
