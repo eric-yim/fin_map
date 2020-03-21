@@ -18,5 +18,5 @@ The observation, here, is what I call the PrimeMap. To represent a single minute
   </p>
   <p>
 I show the overnight and first half of a trading day here. From the PrimeMap, the human eye can see periods of higher volatility and lower volatility.
-  
+<img src="https://user-images.githubusercontent.com/48815706/77219367-2cdd5c80-6b03-11ea-9c8f-d966e2b6c29d.png">  
   </p>
