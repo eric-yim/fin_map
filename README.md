@@ -24,4 +24,10 @@ I show the overnight and first half of a trading day here. From the PrimeMap, th
  
 <h2>Results</h2>
 <p>The network can easily fit to the training data. This is good news considering previous networks with a scalar output ended in "analysis paralysis." Below, I show price movement with along with the predictions reduced to a mean.
- Interestingly, the trained model does seem to make better-than-random predictions on out-of-sample data.
+  </p>
+  <img src="https://user-images.githubusercontent.com/48815706/77219814-4e404780-6b07-11ea-9eab-f06bcf14e6be.png">
+<p>
+ Interestingly, the trained model does seem to make better-than-random predictions on out-of-sample data. Note how after each of the 2 highest peaks, the price goes up. However, the model failed to predict the extended rally. Perhaps short-term rebounds are more common in the training data, and extended rallies are less common.
+</p>
+<img src="https://user-images.githubusercontent.com/48815706/77219817-4ed8de00-6b07-11ea-8877-3a94e2009266.png">
+<p>I've discussed two main concepts: using the PrimeMap as a method of transforming price movement and using the distribution output to make an easier target for randomness. While the output still contains too much noise to directly trade off of, there is some potential. Future studies could include combining the inputs with other observations, such as economic data, time of day data, other financial indicators, or some trend following system. Another route could be to train on a subset of days/times (for example days that meet some criteria) and see if out of sample results become more exact.</p>
