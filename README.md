@@ -9,6 +9,7 @@ In financial markets (except in the case where the actor has loads of capital), 
 <h2>Why Cat DQN</h2>
 <p>
 The categorical dqn outputs a distribution rather than a single value. This distribution gives the network some flexibility with matching the valuation, which is important for an inherently random environment like in financial markets. A prior train with similar inputs and the standard dqn output, yielded a network that would output a constant number (meaning, it could not find a pattern and defaulted to some mean value).
+<img src="https://user-images.githubusercontent.com/48815706/77218908-724b5b00-6afe-11ea-85c8-dc91f554981c.gif" />
 </p>
 <h2>Setup</h2>
 <p>The environment loads with some known data. (Data is assumed to be stored in OHLC format.) The environment can be used with standard reinforcement learning methods. But here, I am interested only in valuation. The observation is a manipulation of the recent X minutes (30 minutes). The reward is a scaled profit or loss going into the next minute.</p>
